@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "INN0671",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus15.actions.githubusercontent.com/Y4dccMGTQdAUMjfhlWqF0Xcexqyf5aCPHvWScVcGDCT4obsLBM/",
+  "gitHubUrl": "https://github.com/Iria1234/multi-env-pipeline-lab",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
