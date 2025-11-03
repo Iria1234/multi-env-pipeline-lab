@@ -1,8 +1,8 @@
 name: Test Self-Hosted Runner
- 
+
 on:
   workflow_dispatch:
- 
+
 jobs:
   test:
   name: Test Runner & Cluster Access
