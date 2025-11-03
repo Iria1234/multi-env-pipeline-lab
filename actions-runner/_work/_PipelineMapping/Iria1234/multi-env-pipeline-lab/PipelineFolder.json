@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "Iria1234/multi-env-pipeline-lab",
+  "pipelineDirectory": "multi-env-pipeline-lab",
+  "workspaceDirectory": "multi-env-pipeline-lab\\multi-env-pipeline-lab",
+  "repositories": {
+    "Iria1234/multi-env-pipeline-lab": {
+      "repositoryPath": "multi-env-pipeline-lab\\multi-env-pipeline-lab",
+      "lastRunOn": "11/03/2025 08:41:04 +01:00"
+    }
+  },
+  "lastRunOn": "11/03/2025 08:41:04 +01:00"
+}
