@@ -1,13 +1,13 @@
 name: Multi-Environment CI/CD Pipeline
- 
+
 on:
   push:
-  branches: [main]
-  paths:
-    - 'apps/**'
-    - 'environments/**'
-    - '.github/workflows/**'
- 
+    branches: [main]
+    paths:
+      - 'apps/**'
+      - 'environments/**'
+      - '.github/workflows/**'
+
 jobs:
   # Job 1: Desplegar a Dev (automático)
   deploy-dev:
@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "🚀 Desplegando en el entorno dev..."
           /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe apply -k environments/dev
-      
+        
       - name: Wait for rollout
         run: |
           echo "⏳ Esperando a que termine el despliegue..."
@@ -57,7 +57,7 @@ jobs:
         run: |
           echo "🚀 Desplegando en el entorno staging..."
           /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe apply -k environments/staging
-      
+        
       - name: Wait for rollout
         run: |
           echo "⏳ Esperando a que termine el despliegue..."
@@ -68,10 +68,10 @@ jobs:
           echo "✅ Verificando el despliegue..."
           /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe get pods -n staging -l app=webapp
           /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe get svc -n staging
-      
+        
       - name: ✅ Staging deployment complete
         run: echo "✅ ¡Despliegue en staging finalizado!"
- 
+  
   # Job 6: Desplegar a Producción (requiere aprobación manual)
   deploy-prod:
     name: 🚀 Deploy a Producción
@@ -89,7 +89,7 @@ jobs:
         run: |
           echo "🚀 Desplegando en el entorno de producción..."
           /mnt/c/Program\ Files/Docker/Docker/resources/bin/kubectl.exe apply -k environments/prod
-        
+      
       - name: Wait for rollout
         run: |
           echo "⏳ Esperando a que termine el despliegue..."
